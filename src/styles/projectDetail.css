@@ -1,0 +1,267 @@
+/* --- OSNOVA STRANICE --- */
+.project-detail-page {
+  background-color: #F6F0D7; 
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+/* --- HERO SEKCIJA (Popravljen raspored) --- */
+.project-hero {
+  background-color: var(--dark-green);
+  color: #F6F0D7;
+  /* Povećan gornji padding (80px) da Back dugme ima mesta */
+  padding: 80px 0 70px 0; 
+  position: relative;
+  overflow: hidden;
+}
+
+.project-hero::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(246, 240, 215, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #F6F0D7;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  /* Povećan razmak ispod Back dugmeta da se ne sudara sa kategorijom */
+  margin-bottom: 3.5rem; 
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
+.category-tag {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* Povećan razmak ispod kategorije */
+  margin-bottom: 1rem; 
+  opacity: 0.6;
+  font-weight: 700;
+}
+
+.project-hero h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin: 0; /* Resetovan margin da bi razmaci iznad kontrolisali poziciju */
+  letter-spacing: -3px;
+  font-weight: 900;
+}
+
+.mini-tech-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 2rem; /* Razmak iznad tagova */
+}
+
+.mini-tech-list span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 14px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #F6F0D7;
+}
+
+/* --- ZAJEDNIČKI STILOVI ZA SEKCIJE --- */
+.detail-section {
+  padding: 60px 0;
+  background-color: #F6F0D7; 
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-green);
+  font-weight: 800;
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-title::after {
+  content: "";
+  height: 1px;
+  background: rgba(6, 78, 59, 0.15);
+  flex: 1;
+}
+
+/* Bullets */
+.project-features-list {
+  list-style: none;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  border: 1px solid rgba(6, 78, 59, 0.1);
+  border-left: 5px solid var(--dark-green);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-features-list li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.project-features-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--dark-green);
+  font-weight: bold;
+}
+
+/* --- HOW I BUILT IT GRID --- */
+.impl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.impl-card {
+  display: flex;
+  gap: 15px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
+}
+
+/* --- GALERIJA (Standardni red) --- */
+.gallery-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+/* Red za kockaste slike (Bike Rental) */
+.gallery-row.compact-row {
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+}
+
+.gallery-img-box {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  display: flex;
+}
+
+/* MOCKUP IZGLED ZA KOCKASTE SLIKE */
+.gallery-img-box.compact-img {
+  aspect-ratio: 16 / 10;
+  background-color: #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.gallery-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-img-box.compact-img img {
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+}
+
+.gallery-row:hover .gallery-img-box img {
+  transform: scale(1.06);
+}
+
+/* Cik-cak */
+.gallery-row:nth-child(even) { direction: rtl; }
+.gallery-row:nth-child(even) .gallery-text { direction: ltr; }
+
+.gallery-text h4 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--dark-green);
+}
+
+/* --- CTA SEKCIJA --- */
+.project-cta {
+  text-align: center;
+  padding: 60px 2rem;
+  background-color: var(--dark-green);
+  color: #F6F0D7;
+}
+
+.github-big-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #F6F0D7;
+  color: var(--dark-green);
+  padding: 0.8rem 2.5rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 800;
+  margin-top: 1.5rem;
+  transition: 0.3s;
+}
+
+.github-big-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* --- RESPONZIVNOST --- */
+@media (max-width: 900px) {
+  .container { padding: 0 1.5rem; }
+  .project-hero h1 { font-size: 2.8rem; }
+  .project-hero { padding: 60px 0 40px 0; }
+  .back-btn { margin-bottom: 2rem; }
+  
+  .gallery-row, .gallery-row.compact-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .gallery-row:nth-child(even) { direction: ltr; }
+  
+  .gallery-img-box.compact-img {
+    aspect-ratio: auto;
+    padding: 15px;
+  }
+}
