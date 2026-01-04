@@ -20,7 +20,7 @@ export const projects = [
 
     github: "https://github.com/andrijanaopacic/napredneJavaTehnologije",
     techStack: ["Java", "Spring Boot", "React", "MySQL", "JWT"],
-    image: "/src/assets/njtSlika.png",
+    image: "/njtSlika.png",
     // Tehnicki deo - jednostavnije napisano
     implementation: [
       { 
@@ -32,9 +32,9 @@ export const projects = [
     ],
     // Galerija slika sa tvojim opisima
     gallery: [
-      { img: "/src/assets/njtKorisnik.png", title: "Marketplace", desc: "This view allows users to easily search and browse available cars using multiple filters, such as price range, transmission type, fuel type, production year (min/max), and brand. Based on the selected criteria, matching vehicles are displayed as cards with an image and short summary. By opening a car’s details, users can view a mini modal with additional images and key information about the vehicle." },
-      { img: "/src/assets/njtAdmin.png", title: "Admin View", desc: "This view is designed for administrators to manage their own car listings. Admins can search through their ads, add new listings, edit existing ones, or delete ads when needed. This interface provides full control over personal advertisements, making it easy to keep listings up to date and well organized." },
-      { img: "/src/assets/njtSacuvani.png", title: "Saved Ads", desc: "Users can save ads they are interested in for later viewing. Saved listings are stored per user and remain available every time the user logs in. From the Saved Ads page, users can easily review their favorite cars and remove ads they no longer wish to keep." }
+      { img: "/njtKorisnik.png", title: "Marketplace", desc: "This view allows users to easily search and browse available cars using multiple filters, such as price range, transmission type, fuel type, production year (min/max), and brand. Based on the selected criteria, matching vehicles are displayed as cards with an image and short summary. By opening a car’s details, users can view a mini modal with additional images and key information about the vehicle." },
+      { img: "/njtAdmin.png", title: "Admin View", desc: "This view is designed for administrators to manage their own car listings. Admins can search through their ads, add new listings, edit existing ones, or delete ads when needed. This interface provides full control over personal advertisements, making it easy to keep listings up to date and well organized." },
+      { img: "/njtSacuvani.png", title: "Saved Ads", desc: "Users can save ads they are interested in for later viewing. Saved listings are stored per user and remain available every time the user logs in. From the Saved Ads page, users can easily review their favorite cars and remove ads they no longer wish to keep." }
     ]
   },
   {
@@ -56,7 +56,7 @@ export const projects = [
   },
   github: "https://github.com/andrijanaopacic/projektovanjeSoftvera",
   techStack: ["Java", "Java Swing", "Socket Programming", "MySQL"],
-  image: "/src/assets/bajs.jpg",
+  image: "/bajs.jpg",
   implementation: [
     {
       title: "Client-Server Architecture",
@@ -73,31 +73,31 @@ export const projects = [
   ],
   gallery: [
   {
-    img: "/src/assets/pregledKonfifuracije.png",
+    img: "/pregledKonfifuracije.png",
     isCompact: true,
     title: "Server Configuration",
     desc: "This screen allows users to configure and review the server connection settings, including URL, username, password, and portThis screen allows users to configure and review the database connection settings for the server, including URL, username, password, and port. Users can create new configurations or review existing ones. Proper database configuration ensures the server can connect and store data reliably before starting the application.. Users can create new configurations or review existing ones. Proper configuration ensures that the server and client can communicate reliably, which is essential before starting the application."
   },
   {
-    img: "/src/assets/pokretanjeServera.png",
+    img: "/pokretanjeServera.png",
     isCompact: true,
     title: "Server Control Panel",
     desc: "This panel displays the status of the server and manages connected clients. Two tables show connected and disconnected users. As clients log in, they move to the connected list. Multiple clients can interact simultaneously, thanks to the use of threads and sockets, allowing real-time monitoring and management of all active sessions."
   },
   {
-    img: "/src/assets/prijavaNaSistem.png",
+    img: "/prijavaNaSistem.png",
     isCompact: true,
     title: "Vendor Login & Registration",
     desc: "Vendors can register or log in using their username and password. The password field supports toggling to show or hide the entered value. Login credentials are sent to the server for validation, and error messages appear if the data is incorrect. Once authenticated, the vendor gains secure access to manage rentals and customers."
   },
   {
-    img: "/src/assets/iznajmljivanje.png",
+    img: "/iznajmljivanje.png",
     isCompact: true,
     title: "Rental Management",
     desc: "This screen allows vendors to add, edit, and delete individual rental items. The interface calculates the total rental amount dynamically as items are added. Data is only saved to the MySQL database when the vendor confirms the rental. If required information is missing or entered incorrectly, an error message is displayed, ensuring data integrity and preventing incomplete or invalid records from being stored."
   },
   {
-    img: "/src/assets/kupac.png",
+    img: "/kupac.png",
     isCompact: true,
     title: "Customer Management",
     desc: "Users can search for customers by name, surname, or location. Search results populate a table with relevant entries. Selecting a customer opens a detailed view, where users can edit or delete the customer's information. All changes are sent to the server and reflected in the database, maintaining accurate and up-to-date records."
@@ -128,7 +128,7 @@ export const projects = [
     github: null,
     live: "https://www.fonovcentar.rs/portfolio/fonklame-2024/",
     techStack: ["WordPress", "HTML", "CSS", "JavaScript"],
-    image: "/src/assets/fonklameLogo.png",
+    image: "/fonklameLogo.png",
     // DODATO: Mora da postoji bar prazan niz da ne bi pucao map()
     implementation: [
       { title: "CSS – Styling, Layout & Animations", desc: "CSS defines the visual identity of the project through custom colors, typography, and layout adjustments on top of WordPress. Animations such as the envelope opening and curtain reveal are implemented using transitions, transforms, and keyframes, while media queries ensure full responsiveness across screen sizes." },
@@ -136,25 +136,25 @@ export const projects = [
     ],
     gallery: [
     {
-      img: "/src/assets/otvoriMe.png",
+      img: "/otvoriMe.png",
       
       title: "'Open Me' Envelope",
       desc: "An interactive envelope that, when clicked, triggers confetti animation and reveals the event invitation. This was used to creatively engage visitors."
     },
     {
-      img: "/src/assets/otovorenaKoverta.png",
+      img: "/otovorenaKoverta.png",
       
       title: "Opened Envelope",
       desc: "After opening the envelope, users see an invitation along with animated confetti, providing a playful and engaging introduction to the event."
     },
     {
-      img: "/src/assets/panelisti.png",
+      img: "/panelisti.png",
       
       title: "Interactive Panelists",
       desc: "Panelists were initially hidden behind curtains. Hovering over them triggers an animation that reveals their photo and biography, creating an engaging and interactive presentation of the event speakers."
     },
     {
-      img: "/src/assets/ostaliProjekti.png",
+      img: "/ostaliProjekti.png",
       
       title: "Project Cards",
       desc: "Cards showcasing other projects of the organization. Each card links to a dedicated page, allowing visitors to explore past campaigns. The layout was designed for both desktop and mobile users."

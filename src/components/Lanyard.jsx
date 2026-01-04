@@ -5,8 +5,8 @@ import { useTexture, Text, Environment } from '@react-three/drei'
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier'
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 
-import zelena from '../assets/zelena.png'
-import myImage from '../assets/jaAndrijana.png'
+import zelena from '/zelena.png'
+import myImage from '/jaAndrijana.png'
 
 extend({ MeshLineGeometry, MeshLineMaterial })
 
