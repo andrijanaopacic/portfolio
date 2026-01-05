@@ -12,11 +12,10 @@
   padding: 0 4rem;
 }
 
-/* --- HERO SEKCIJA (Popravljen raspored) --- */
+/* --- HERO SEKCIJA --- */
 .project-hero {
   background-color: var(--dark-green);
   color: #F6F0D7;
-  /* Povećan gornji padding (80px) da Back dugme ima mesta */
   padding: 80px 0 70px 0; 
   position: relative;
   overflow: hidden;
@@ -41,7 +40,6 @@
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
-  /* Povećan razmak ispod Back dugmeta da se ne sudara sa kategorijom */
   margin-bottom: 3.5rem; 
   opacity: 0.7;
   transition: 0.3s;
@@ -57,7 +55,6 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  /* Povećan razmak ispod kategorije */
   margin-bottom: 1rem; 
   opacity: 0.6;
   font-weight: 700;
@@ -66,7 +63,7 @@
 .project-hero h1 {
   font-size: 4.5rem;
   line-height: 1.1;
-  margin: 0; /* Resetovan margin da bi razmaci iznad kontrolisali poziciju */
+  margin: 0; 
   letter-spacing: -3px;
   font-weight: 900;
 }
@@ -75,7 +72,7 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 2rem; /* Razmak iznad tagova */
+  margin-top: 2rem; 
 }
 
 .mini-tech-list span {
@@ -141,7 +138,7 @@
   font-weight: bold;
 }
 
-/* --- HOW I BUILT IT GRID --- */
+/* --- HOW I BUILT IT  --- */
 .impl-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -157,7 +154,7 @@
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
 }
 
-/* --- GALERIJA (Standardni red) --- */
+/* --- GALERIJA --- */
 .gallery-row {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -166,7 +163,7 @@
   margin-bottom: 50px;
 }
 
-/* Red za kockaste slike (Bike Rental) */
+/* Red za kockaste slike */
 .gallery-row.compact-row {
   grid-template-columns: 1.2fr 1fr;
   gap: 4rem;
@@ -181,7 +178,7 @@
   display: flex;
 }
 
-/* MOCKUP IZGLED ZA KOCKASTE SLIKE */
+/* ZA KOCKASTE SLIKE */
 .gallery-img-box.compact-img {
   aspect-ratio: 16 / 10;
   background-color: #f1f3f5;

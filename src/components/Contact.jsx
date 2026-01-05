@@ -3,7 +3,7 @@ import { Mail, Phone, Linkedin, Github, ArrowUpRight, Code2 } from 'lucide-react
 import "../styles/contact.css";
 
 function Contact() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2025;
 
   return (
     <footer className="footer-section" id="contact">
@@ -61,7 +61,7 @@ function Contact() {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="copyright">
-              © {currentYear} Andrijana Opačić. All rights reserved.
+              © {currentYear} Andrijana Opačić
             </p>
             <div className="footer-tech">
               <Code2 size={16} />

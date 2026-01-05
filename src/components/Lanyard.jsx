@@ -47,7 +47,6 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     linearDamping: 2.5 
   }
 
-  // PRODUŽENA VEZICA: Segmenti povećani sa 1.0 na 1.2
   useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1.2])
   useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1.2])
   useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1.2])
@@ -112,18 +111,18 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
             onPointerDown={(e) => (e.target.setPointerCapture(e.pointerId), drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))}
           >
-            {/* 1. OSNOVNO TELO KARTICE */}
+            
             <mesh>
               <boxGeometry args={[2.4, 3.8, 0.05]} />
               <meshStandardMaterial color="#064e3b" roughness={0.5} />
             </mesh>
 
-            {/* 2. POZADINSKI AO */}
+           
             <Text position={[0, 0, 0.01]} fontSize={1.2} color="white" transparent opacity={0.02} fontWeight="bold">
               AO
             </Text>
 
-            {/* 3. VODENI ŽIG GORE DESNO */}
+            
             <Text 
               position={[0.85, 1.45, 0.02]} 
               fontSize={0.2} 
@@ -135,7 +134,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
               AO
             </Text>
 
-            {/* 4. IDENTITY SYSTEM TEKST (Vertikalno levo) */}
+           
             <Text 
               position={[-1.05, 0.5, 0.02]} 
               rotation={[0, 0, Math.PI / 2]} 
@@ -147,40 +146,40 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
               STUDENT IDENTITY SYSTEM // FON
             </Text>
 
-            {/* 5. SLIKA */}
+          
             <mesh position={[0, 0.35, 0.03]}>
               <planeGeometry args={[2.2, 2.5]} /> 
               <meshBasicMaterial map={myImageTexture} transparent={true} />
             </mesh>
 
-            {/* 6. BEŽ OKVIR ZA IME */}
+            
             <mesh position={[0, -1.15, 0.04]}>
               <planeGeometry args={[2.4, 0.9]} />
               <meshBasicMaterial color="#F6F0D7" />
             </mesh>
 
-            {/* 7. IME I PREZIME */}
+            {/* IME I PREZIME */}
             <Text position={[0, -0.95, 0.05]} fontSize={0.18} color="#064e3b" fontWeight="bold">
               ANDRIJANA OPAČIĆ
             </Text>
 
-            {/* 8. TITULA */}
+            {/* TITULA */}
             <Text position={[0, -1.25, 0.05]} fontSize={0.08} color="#555">
               Software Engineering Student
             </Text>
 
-            {/* NOVO: IDENTITY BROJ - LEVO CRNI (Postavljen na bež deo) */}
+            
             <Text position={[-0.8, -1.45, 0.05]} fontSize={0.05} color="black" fontWeight="bold">
               ID: 40010268
             </Text>
 
-            {/* 9. DONJA CRNA TRAKA */}
+            
             <mesh position={[0, -1.7, 0.05]}>
               <planeGeometry args={[2.4, 0.2]} />
               <meshBasicMaterial color="black" /> 
             </mesh>
 
-            {/* 10. PROREZ ZA TRAKU */}
+            {/* PROREZ ZA TRAKU */}
             <mesh position={[0, 1.7, 0.01]}>
               <boxGeometry args={[0.6, 0.15, 0.06]} />
               <meshStandardMaterial color="#111" />

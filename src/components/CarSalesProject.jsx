@@ -3,19 +3,18 @@ import { Link } from 'react-router-dom';
 import { Github, Globe, ShieldCheck, Database, Layout, Server, ArrowLeft } from 'lucide-react';
 import "../styles/projectDetail.css";
 
-// Uvezi slike (proveri putanje)
+
 import njtPocetna from '../assets/njtSlika.png';
 import njtOglasi from '../assets/njtKorisnik.png';
 import njtAdmin from '../assets/njtAdmin.png';
 import njtSacuvani from '../assets/njtSacuvani.png';
 
 const CarSalesProject = () => {
-  // Skroluj na vrh pri učitavanju
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="project-detail-page">
-      {/* 1. HERO SECTION */}
+      {/* HERO SECTION */}
       <section className="project-hero">
         <Link to="/" className="back-link"><ArrowLeft size={20} /> Back to Portfolio</Link>
         <div className="container">
@@ -33,7 +32,7 @@ const CarSalesProject = () => {
         </div>
       </section>
 
-      {/* 2. OVERVIEW & CHALLENGE */}
+      {/* OVERVIEW */}
       <section className="project-content section-padding">
         <div className="container grid-2">
           <div className="content-text">
@@ -69,7 +68,7 @@ const CarSalesProject = () => {
         </div>
       </section>
 
-      {/* 3. TECHNICAL ARCHITECTURE (Ovo poslodavci obožavaju) */}
+      
       <section className="tech-deep-dive section-padding">
         <div className="container">
           <h2>Technical Implementation</h2>
@@ -104,7 +103,7 @@ const CarSalesProject = () => {
         </div>
       </section>
 
-      {/* 4. VISUAL GALLERY (Showcasing Screenshots) */}
+      {/* GALLERY */}
       <section className="project-gallery section-padding">
         <div className="container">
           <h2>Interface Experience</h2>
@@ -135,7 +134,7 @@ const CarSalesProject = () => {
         </div>
       </section>
 
-      {/* 5. CALL TO ACTION */}
+      {/* GITHUB */}
       <section className="project-footer section-padding">
         <div className="container text-center">
           <h2>Interested in the code?</h2>

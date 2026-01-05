@@ -19,7 +19,6 @@ function Projects() {
 
             <div className="project-content">
               <div className="project-tech">
-                {/* PROMENJENO: tech u techStack */}
                 {proj.techStack && proj.techStack.slice(0, 3).map((t, i) => (
                   <span key={i} className="tech-tag">{t}</span>
                 ))}

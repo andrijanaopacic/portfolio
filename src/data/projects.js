@@ -13,15 +13,14 @@ export const projects = [
         "Create, edit, and manage personal car ads",
         "Save favorite listings for later"
       ],
-      outro: `The backend is built with Spring Boot and handles business logic, authentication, and data management, while the React frontend provides a responsive and user-friendly interface.
+      outro: `The backend is implemented in Java using Spring Boot and follows a layered architecture (Controller, Service, Repository). Controllers expose REST endpoints and handle HTTP requests, services contain the core business logic and validation rules, while repositories are responsible for database access and persistence.
 
-      Administrators can activate or deactivate ads to ensure content quality. The system follows a RESTful architecture, enabling clean communication between frontend and backend and supporting future scalability.`
-    },
+      Entities represent the database model, while DTOs and custom mappers are used to transfer data between layers and prevent direct exposure of entities to the API. The React frontend communicates with the backend through a RESTful API, enabling users to manage advertisements in a secure, structured, and scalable system.`
+ },
 
     github: "https://github.com/andrijanaopacic/napredneJavaTehnologije",
     techStack: ["Java", "Spring Boot", "React", "MySQL", "JWT"],
     image: "/njtSlika.png",
-    // Tehnicki deo - jednostavnije napisano
     implementation: [
       { 
         title: "Backend & Security", 
@@ -30,7 +29,6 @@ export const projects = [
 { title: "Database", desc: "The application uses a MySQL relational database for storing data related to users, car ads, and vehicle details. Spring Data JPA is used to simplify database access, enabling efficient CRUD operations and automatic query generation." },
       { title: "API & Communication", desc: "A RESTful API connects the frontend and backend, allowing seamless data exchange. On the frontend, Axios is used to send HTTP requests and attach JWT tokens to authorized requests." }
     ],
-    // Galerija slika sa tvojim opisima
     gallery: [
       { img: "/njtKorisnik.png", title: "Marketplace", desc: "This view allows users to easily search and browse available cars using multiple filters, such as price range, transmission type, fuel type, production year (min/max), and brand. Based on the selected criteria, matching vehicles are displayed as cards with an image and short summary. By opening a car’s details, users can view a mini modal with additional images and key information about the vehicle." },
       { img: "/njtAdmin.png", title: "Admin View", desc: "This view is designed for administrators to manage their own car listings. Admins can search through their ads, add new listings, edit existing ones, or delete ads when needed. This interface provides full control over personal advertisements, making it easy to keep listings up to date and well organized." },
@@ -52,25 +50,35 @@ export const projects = [
       "Add, edit, and delete rentals, including tracking total amounts",
       "Search and manage customers by name, surname, or location"
     ],
-    outro: "The system uses a layered architecture with controllers, business logic, and database broker classes. Abstract operations ensure transactional consistency. Java Swing provides a user-friendly GUI, while the server manages multiple clients concurrently using threads and sockets."
+    outro: `The system is implemented as a Java-based client-server application using socket communication and multithreading. Each client communicates with the server through serializable request and response objects that define the requested operation and its parameters, enabling a clear and extensible communication protocol.
+
+    On the server side, a dedicated thread is created for every connected client, allowing multiple vendors to work concurrently. Client requests are processed through a centralized controller and a business logic layer, where each system operation is implemented as a separate class based on a template method approach. This ensures consistent validation, execution flow, and transaction handling across all operations.`
+
   },
   github: "https://github.com/andrijanaopacic/projektovanjeSoftvera",
   techStack: ["Java", "Java Swing", "Socket Programming", "MySQL"],
   image: "/bajs.jpg",
   implementation: [
     {
-      title: "Client-Server Architecture",
-      desc: "The server handles multiple clients via sockets and dedicated threads, while controllers translate GUI inputs into domain objects sent to the server. Responses are sent back to update the client interface."
+      "title": "Client-Server Architecture",
+      "desc": "The application is designed as a client-server system using socket communication. The server handles multiple concurrent clients by creating a dedicated thread for each connection, allowing vendors to work simultaneously without interference. The client sends structured requests containing operation types and parameters, which the server processes through a centralized controller and business logic layer. Responses are then sent back to update the client interface."
+    }
+    ,
+    {
+      title: "Template Method Pattern (System Operations)",
+      desc: "Business logic on the server is implemented using a template method pattern through an abstract generic operation class. Each concrete system operation defines its specific behavior while inheriting a standardized execution flow that includes validation, database access, and transaction control (commit/rollback)."
     },
     {
-      title: "Business Logic & Abstract Operations",
-      desc: "Core operations are implemented using abstract generic classes, managing database connection, validation, preconditions, execution, and commit/rollback to ensure consistency for rentals, customers, vendors, and other entities."
-    },
+      "title": "Database & Repository Layer",
+      "desc": "All entities—bikes, customers, vendors, rentals, locations, and duty schedules—are stored in a MySQL database. I implemented generic repository classes that handle CRUD operations, map ResultSet data to domain objects, and provide reusable methods for all entities. I also managed database connections, transactions (commit/rollback), and ensured data consistency across operations, integrating them seamlessly with the Template Method pattern in server-side business logic."
+    }
+,
     {
-      title: "Database",
-      desc: "All entities—bikes, customers, vendors, rentals, locations, and duty schedules—are stored in a MySQL database. Database broker classes handle CRUD operations and ensure proper communication between the business logic and the database."
+      title: "Client-Side MVC Structure",
+      desc: "The client application is developed using Java Swing and follows an MVC-oriented structure. Swing forms are responsible only for presenting the user interface, while controllers handle user actions, input validation, and communication with the server. A central coordinator manages navigation between forms and controllers, providing a clear application flow and maintaining loose coupling between UI components and business logic."
     }
   ],
+
   gallery: [
   {
     img: "/pregledKonfifuracije.png",
@@ -129,7 +137,6 @@ export const projects = [
     live: "https://www.fonovcentar.rs/portfolio/fonklame-2024/",
     techStack: ["WordPress", "HTML", "CSS", "JavaScript"],
     image: "/fonklameLogo.png",
-    // DODATO: Mora da postoji bar prazan niz da ne bi pucao map()
     implementation: [
       { title: "CSS – Styling, Layout & Animations", desc: "CSS defines the visual identity of the project through custom colors, typography, and layout adjustments on top of WordPress. Animations such as the envelope opening and curtain reveal are implemented using transitions, transforms, and keyframes, while media queries ensure full responsiveness across screen sizes." },
       { title: "JavaScript – Interactivity & Logic", desc: "JavaScript dynamically controls component states (open/close) by toggling CSS classes, which then trigger coordinated CSS animations. User interactions such as clicks and hover events launch visual effects, including a confetti animation implemented via a dedicated library. Separate handlers were created for desktop and mobile to ensure consistent behavior across devices." }

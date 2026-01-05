@@ -1,6 +1,5 @@
 .footer-section {
   background-color: var(--dark-green);
-  /* Jasno odvajanje od projekata pomoću gornje ivice i paddinga */
   border-top: 1px solid rgba(246, 240, 215, 0.1); 
   padding: 80px 2rem 40px 2rem;
   width: 100%;
@@ -25,7 +24,6 @@
   margin-top: 1rem;
 }
 
-/* Stil za dodatne informacije o tebi */
 .footer-bio {
   color: rgba(246, 240, 215, 0.7);
   font-size: 1.1rem;
@@ -93,7 +91,7 @@
   opacity: 0.2;
 }
 
-/* FOOTER BOTTOM - TVOJ POTPIS */
+/* FOOTER BOTTOM */
 .footer-bottom {
   padding-top: 2rem;
   border-top: 1px solid rgba(246, 240, 215, 0.05);

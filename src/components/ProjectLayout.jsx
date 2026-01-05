@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { Github, ArrowLeft, CheckCircle2 } from 'lucide-react';
-import Contact from "./Contact"; // 👈 Uvezi tvoj Contact (Footer)
+import Contact from "./Contact";
 import "../styles/projectDetail.css";
 
 const ProjectLayout = () => {
@@ -30,7 +30,7 @@ const ProjectLayout = () => {
       {/* OVERVIEW */}
       <section className="detail-section">
           <div className="container">
-            <div className="overview-content"> {/* 👈 Dodaj ovo */}
+            <div className="overview-content">
               <h3 className="section-title">Project Overview</h3>
               <p className="main-desc">{project.fullDescription.intro}</p>
               
@@ -74,7 +74,6 @@ const ProjectLayout = () => {
             
             <div className="compact-gallery">
               {project.gallery.map((item, idx) => (
-                /* Dodajemo compact-row klasu na ceo red ako je slika isCompact */
                 <div key={idx} className={`gallery-row ${item.isCompact ? 'compact-row' : ''}`}>
                   
                   <div className={`gallery-img-box ${item.isCompact ? 'compact-img' : ''}`}>
@@ -94,7 +93,7 @@ const ProjectLayout = () => {
       )}
 
 
-      {/* CTA SECTION - Zainteresovani za kod */}
+      
       <section className="project-cta">
         <div className="container">
           <h2>Interested in the code?</h2>
@@ -105,7 +104,7 @@ const ProjectLayout = () => {
         </div>
       </section>
 
-      {/* FOOTER - Tvoj kontakt koji je već zelen i lep */}
+      
       <Contact />
     </div>
   );

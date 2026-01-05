@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import ProjectLayout from "./components/ProjectLayout"; // 👈 Uvozimo samo jedan Layout
+import ProjectLayout from "./components/ProjectLayout"; 
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
           </>
         } />
 
-        {/* DINAMIČKA RUTA: Bilo koji broj posle /project/ će otvoriti isti šablon */}
+        {/* DINAMIČKA RUTA */}
         <Route path="/project/:id" element={<ProjectLayout />} />
       </Routes>
     </div>
