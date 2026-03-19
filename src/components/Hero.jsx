@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   const skills = [
-    "Java", "C", "Python", "React", "Spring Boot", "SQL", 
-    "WordPress", "Adobe Premiere Pro", "CapCut", "Canva", 
+    "Java", "C", "C#", "Python", "React", "Spring Boot", "Next.js",
+    "TypeScript", "SQL", "T-SQL", "MySQL", "PostgreSQL", "MS SQL Server",
+    "WordPress", "Adobe Premiere Pro", "CapCut", "Canva",
     "Microsoft Office", "English"
   ];
 
